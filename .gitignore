@@ -1,0 +1,18 @@
+# Ambiente
+.env
+
+# Maven
+backend/target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# Claude Code (local)
+.claude/settings.local.json
+
+# Node (quando o front entrar)
+frontend/node_modules/
+frontend/dist/

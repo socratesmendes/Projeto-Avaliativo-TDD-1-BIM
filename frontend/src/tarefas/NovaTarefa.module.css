@@ -1,0 +1,88 @@
+.form {
+  margin-bottom: var(--sp-8);
+}
+
+.linhaPrincipal {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.linhaPrincipal input {
+  flex: 1;
+  min-width: 0;
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--traco);
+  border-radius: var(--raio-campo);
+  background: var(--folha);
+  color: var(--tinta);
+  font: inherit;
+  font-size: 16px;
+}
+
+.linhaPrincipal button {
+  padding: var(--sp-2) var(--sp-4);
+  min-height: 44px;
+  border: none;
+  border-radius: var(--raio-campo);
+  background: var(--tinta);
+  color: var(--papel);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.linhaPrincipal button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.linkDetalhes {
+  display: inline-block;
+  margin-top: var(--sp-2);
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--tinta-suave);
+  font: inherit;
+  font-size: 16px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.erroCampo {
+  margin: var(--sp-1) 0 0;
+  color: var(--tinta);
+  font-size: 16px;
+}
+
+.erroGeral {
+  margin: var(--sp-2) 0 0;
+  color: var(--tinta);
+  font-size: 16px;
+}
+
+.detalhes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin-top: var(--sp-3);
+}
+
+.detalhes label {
+  font-size: 16px;
+  color: var(--tinta);
+}
+
+.detalhes textarea {
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--traco);
+  border-radius: var(--raio-campo);
+  background: var(--folha);
+  color: var(--tinta);
+  font: inherit;
+  font-size: 16px;
+  resize: vertical;
+  min-height: 3rem;
+}

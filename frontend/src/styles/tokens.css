@@ -1,0 +1,26 @@
+:root {
+  /* Cores (contraste medido sobre --papel) */
+  --papel: #f7f8fa;
+  --folha: #ffffff;
+  --tinta: #1b2a6b;
+  --tinta-suave: #5a6285;
+  --traco: #7f86a2;
+  --marca-texto: #ffe45c;
+
+  /* Tipografia */
+  --fonte: 'Alegreya Sans', 'Segoe UI', system-ui, sans-serif;
+
+  /* Espaço: múltiplos de 4px */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-12: 48px;
+  --sp-18: 72px;
+
+  /* Raio por hierarquia */
+  --raio-campo: 6px;
+  --raio-editor: 10px;
+}

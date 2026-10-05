@@ -1,0 +1,153 @@
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--sp-1) var(--sp-3);
+  list-style: none;
+  padding: var(--sp-1) 0;
+}
+
+.marcadorWrapper {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.marcadorInput {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.marcadorInput:not(:disabled) {
+  cursor: pointer;
+}
+
+.marcadorVisual {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--traco);
+  pointer-events: none;
+}
+
+.marcadorInput:checked + .marcadorVisual {
+  background: var(--tinta);
+  border-color: var(--tinta);
+}
+
+.marcadorInput:checked + .marcadorVisual::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 9px;
+  border: solid var(--papel);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.marcadorInput:indeterminate + .marcadorVisual {
+  border-color: var(--tinta);
+  background: linear-gradient(to bottom, var(--tinta) 50%, transparent 50%);
+}
+
+.marcadorInput:focus-visible + .marcadorVisual {
+  outline: 2px solid var(--tinta);
+  outline-offset: 2px;
+}
+
+.nome {
+  flex: 1 1 auto;
+  min-width: 100px;
+  overflow-wrap: break-word;
+  color: var(--tinta);
+  font-weight: 500;
+}
+
+.nome[data-status='CONCLUIDA'] {
+  color: var(--tinta-suave);
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+.nome[data-status='EM_ANDAMENTO'] {
+  background-image: linear-gradient(to bottom, transparent 58%, var(--marca-texto) 58%);
+}
+
+.data {
+  color: var(--tinta-suave);
+  font-size: 14px;
+  font-variant-numeric: lining-nums tabular-nums;
+  white-space: nowrap;
+}
+
+.acoes {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.acao {
+  opacity: 0;
+  padding: var(--sp-1) var(--sp-2);
+  min-height: 44px;
+  border: none;
+  background: none;
+  color: var(--tinta-suave);
+  font: inherit;
+  font-size: 16px;
+  text-decoration: underline;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.item:hover .acao,
+.item:focus-within .acao {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .acao {
+    opacity: 1;
+  }
+}
+
+.confirmacao {
+  flex: 1 1 auto;
+  min-width: 100px;
+  margin: 0;
+  color: var(--tinta);
+}
+
+.confirmacaoBotoes {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.confirmacaoBotoes button {
+  padding: var(--sp-1) var(--sp-3);
+  min-height: 44px;
+  border-radius: var(--raio-campo);
+  font: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.botaoExcluir {
+  border: 1px solid var(--tinta);
+  background: var(--tinta);
+  color: var(--papel);
+  font-weight: 500;
+}
+
+.botaoManter {
+  border: 1px solid var(--traco);
+  background: var(--folha);
+  color: var(--tinta);
+}

@@ -1,0 +1,84 @@
+.pagina {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: var(--sp-18) var(--sp-4) var(--sp-18);
+}
+
+@media (max-width: 480px) {
+  .pagina {
+    padding: var(--sp-12) var(--sp-4);
+  }
+}
+
+.cabecalho h1 {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--tinta);
+}
+
+.subcabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--sp-1) var(--sp-3);
+  color: var(--tinta-suave);
+  margin: var(--sp-2) 0 var(--sp-6);
+}
+
+.esqueleto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.esqueleto div {
+  height: 20px;
+  border-radius: var(--raio-campo);
+  background: color-mix(in srgb, var(--tinta-suave) 10%, transparent);
+}
+
+.erro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  color: var(--tinta);
+}
+
+.erro button {
+  align-self: flex-start;
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--raio-campo);
+  border: 1px solid var(--traco);
+  background: var(--folha);
+  color: var(--tinta);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.vazio {
+  color: var(--tinta-suave);
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin: 0;
+  padding: 0;
+}
+
+.concluidas {
+  margin-top: var(--sp-6);
+}
+
+.concluidas summary {
+  color: var(--tinta-suave);
+  cursor: pointer;
+}
+
+.concluidas .lista {
+  margin-top: var(--sp-3);
+}

@@ -1,0 +1,113 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  width: 100%;
+  padding: var(--sp-4);
+  background: var(--folha);
+  border: 1px solid color-mix(in srgb, var(--traco) 40%, transparent);
+  border-radius: var(--raio-editor);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.campo label {
+  font-size: 16px;
+  color: var(--tinta);
+}
+
+.campo input,
+.campo textarea {
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--traco);
+  border-radius: var(--raio-campo);
+  background: var(--papel);
+  color: var(--tinta);
+  font: inherit;
+  font-size: 16px;
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 3rem;
+}
+
+.erroCampo {
+  margin: 0;
+  color: var(--tinta);
+  font-size: 16px;
+}
+
+.erroGeral {
+  margin: 0;
+  color: var(--tinta);
+  font-size: 16px;
+}
+
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+.status legend {
+  font-size: 16px;
+  color: var(--tinta);
+  padding: 0;
+  margin-bottom: var(--sp-1);
+}
+
+.statusOpcao {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  font-size: 16px;
+  color: var(--tinta);
+  cursor: pointer;
+}
+
+.datas {
+  margin: 0;
+  color: var(--tinta-suave);
+  font-size: 14px;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.botoes {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.botoes button {
+  padding: var(--sp-2) var(--sp-4);
+  min-height: 44px;
+  border-radius: var(--raio-campo);
+  font: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.botoes button[type='submit'] {
+  border: none;
+  background: var(--tinta);
+  color: var(--papel);
+  font-weight: 500;
+}
+
+.botoes button[type='button'] {
+  border: 1px solid var(--traco);
+  background: var(--folha);
+  color: var(--tinta);
+}
+
+.botoes button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
